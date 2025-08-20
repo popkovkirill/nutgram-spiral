@@ -30,10 +30,14 @@ final class ListCommand extends Command
             ];
         }, $handlers, \array_keys($handlers));
 
+        if (\count($handlers) === 0) {
+            $this->warning('No handlers have been registered.');
+
+            return self::SUCCESS;
+        }
+
         $this->table(['Signature', 'Pattern', 'Callable'], $handlers)
             ->render();
-
-        $this->info('Bot webhook removed.');
 
         return self::SUCCESS;
     }

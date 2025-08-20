@@ -34,8 +34,11 @@ final class BotManager implements BotManagerInterface
     #[\Override]
     public function getBot(?string $botName = null): Nutgram
     {
-        return $this->bots[$botName]
-            ?? $this->createBot($botName ?? $this->defaultBot);
+        if (!isset($this->bots[$botName])) {
+            $this->bots[$botName] = $this->createBot($botName ?? $this->defaultBot);
+        }
+
+        return $this->bots[$botName];
     }
 
     /**
