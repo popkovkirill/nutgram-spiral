@@ -16,7 +16,7 @@ use Spiral\Router\RouterInterface;
 #[AsCommand(name: 'nutgram:hook:set', description: 'Remove the bot webhook')]
 final class HookSetCommand extends Command
 {
-    #[Option(name: 'name', shortcut: 'n')]
+    #[Option(name: 'bot', shortcut: 'b')]
     private string|null $botName = null;
 
     /**

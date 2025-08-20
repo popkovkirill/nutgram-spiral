@@ -14,7 +14,7 @@ use Spiral\Console\Command;
 #[AsCommand(name: 'nutgram:hook:info', description: 'Get current webhook status')]
 final class HookInfoCommand extends Command
 {
-    #[Option(name: 'name', shortcut: 'n')]
+    #[Option(name: 'bot', shortcut: 'b')]
     private string|null $botName = null;
 
     /**

@@ -14,7 +14,7 @@ use Spiral\Console\Command;
 #[AsCommand(name: 'nutgram:list', description: 'List all registered handlers')]
 final class ListCommand extends Command
 {
-    #[Option(name: 'name', shortcut: 'n')]
+    #[Option(name: 'bot', shortcut: 'b')]
     private string|null $botName = null;
 
     public function __invoke(BotManagerInterface $botManager): int

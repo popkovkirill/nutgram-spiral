@@ -17,7 +17,7 @@ final class HookRemoveCommand extends Command
     #[Option(shortcut: 'd')]
     private bool $dropPendingUpdates = false;
 
-    #[Option(name: 'name', shortcut: 'n')]
+    #[Option(name: 'bot', shortcut: 'b')]
     private string|null $botName = null;
 
     /**

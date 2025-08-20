@@ -18,7 +18,7 @@ final class RunCommand extends Command
     #[Option]
     private bool $once = false;
 
-    #[Option(name: 'name', shortcut: 'n')]
+    #[Option(name: 'bot', shortcut: 'b')]
     private string|null $botName = null;
 
     /**

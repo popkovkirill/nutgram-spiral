@@ -12,7 +12,7 @@ use Spiral\Console\Command;
 #[AsCommand(name: 'nutgram:register-commands', description: 'Register the bot commands')]
 final class RegisterCommandsCommand extends Command
 {
-    #[Option(name: 'name', shortcut: 'n')]
+    #[Option(name: 'bot', shortcut: 'b')]
     private string|null $botName = null;
 
     public function __invoke(BotManagerInterface $botManager): int

@@ -9,4 +9,5 @@ coverage
 docs
 vendor
 node_modules
+runtime
 .php-cs-fixer.cache
