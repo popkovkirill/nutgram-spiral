@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="6.13.1@1e3b7f0a8ab32b23197b91107adc0a7ed8a05b51">
+  <file src="src/Commands/ListCommand.php">
+    <MissingClosureReturnType>
+      <code><![CDATA[fn () => $this->callable]]></code>
+      <code><![CDATA[fn() => $this->handlers]]></code>
+    </MissingClosureReturnType>
+    <MixedArgument>
+      <code><![CDATA[$callable[0]]]></code>
+      <code><![CDATA[$callable[1]]]></code>
+      <code><![CDATA[$callable[1]]]></code>
+    </MixedArgument>
+    <MixedAssignment>
+      <code><![CDATA[$callable]]></code>
+    </MixedAssignment>
+    <UndefinedThisPropertyFetch>
+      <code><![CDATA[$this->callable]]></code>
+      <code><![CDATA[$this->handlers]]></code>
+    </UndefinedThisPropertyFetch>
+  </file>
+  <file src="src/Config/NutgramConfig.php">
+    <MixedReturnStatement>
+      <code><![CDATA[$this->config['bots'][$botName]
+            ?? throw new \LogicException("Bot '{$botName}' not found")]]></code>
+      <code><![CDATA[$this->config['default_bot'] ?? 'default']]></code>
+      <code><![CDATA[$this->config['default_bot'] ?? 'default']]></code>
+      <code><![CDATA[$this->config['webhook_host'] ?? '']]></code>
+      <code><![CDATA[$this->config['webhook_host'] ?? '']]></code>
+    </MixedReturnStatement>
+  </file>
+</files>

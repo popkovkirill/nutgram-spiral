@@ -1,45 +1,51 @@
 {
-  "name": ":vendor_slug/:package_slug",
-  "description": ":package_description",
+  "name": "popkovkirill/nutgram-spiral",
+  "description": "This is my package nutgram-spiral",
   "keywords": [
-    ":vendor_name",
+    "Nutgram",
     "spiral",
-    ":package_slug"
+    "nutgram-spiral"
   ],
-  "homepage": "https://github.com/:vendor_slug/:package_slug",
+  "homepage": "https://github.com/popkovkirill/nutgram-spiral",
   "license": "MIT",
   "authors": [
     {
-      "name": ":author_name",
-      "email": "author@domain.com",
+      "name": "Kirill Popkov",
+      "email": "kirill.popkov.work@gmail.com",
       "role": "Developer"
     }
   ],
   "require": {
-    "php": "^8.1",
+    "php": "^8.4",
+    "nutgram/nutgram": "^4.38",
     "spiral/boot": "^3.7",
     "spiral/console": "^3.7"
   },
   "require-dev": {
     "mockery/mockery": "^1.5",
     "phpunit/phpunit": "^10.1",
+    "spiral/code-style": "^2.2",
+    "spiral/router": "^3.15",
     "spiral/testing": "^2.0",
-    "vimeo/psalm": "^5.9"
+    "vimeo/psalm": "^6.0"
   },
   "autoload": {
     "psr-4": {
-      "VendorName\\Skeleton\\": "src"
+      "Nutgram\\Spiral\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "VendorName\\Skeleton\\Tests\\App\\": "tests/app",
-      "VendorName\\Skeleton\\Tests\\": "tests/src"
+      "Nutgram\\Spiral\\Tests\\App\\": "tests/app",
+      "Nutgram\\Spiral\\Tests\\": "tests/src"
     }
   },
   "scripts": {
     "test": "vendor/bin/phpunit",
-    "psalm": "vendor/bin/psalm --config=psalm.xml ./src"
+    "cs:diff": "php-cs-fixer fix --dry-run -v --diff",
+    "cs:fix": "php-cs-fixer fix -v",
+    "psalm": "psalm",
+    "psalm:baseline": "psalm --set-baseline=psalm-baseline.xml"
   },
   "config": {
     "sort-packages": true
@@ -47,7 +53,7 @@
   "extra": {
     "spiral": {
       "bootloaders": [
-        "VendorName\\Skeleton\\Bootloader\\SkeletonBootloader"
+        "Nutgram\\Spiral\\Bootloader\\NutgramBootloader"
       ]
     }
   },
