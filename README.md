@@ -15,7 +15,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 
 Make sure that your server is configured with following PHP version and extensions:
 
-- PHP 8.1+
+- PHP 8.4+
 - Spiral framework 3.0+
 
 ## Installation
